@@ -1,3 +1,6 @@
+## 0.0.3
+- Fix bug
+
 ## 0.0.2
 - Add dependency on ikku
 
