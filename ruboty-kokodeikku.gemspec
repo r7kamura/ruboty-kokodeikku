@@ -7,9 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = Ruboty::Kokodeikku::VERSION
   spec.authors       = ["Ryo Nakamura"]
   spec.email         = ["r7kamura@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = "Ruboty plug-in to find haiku from our daily conversations."
+  spec.homepage      = "https://github.com/r7kamura/ruboty-kokodeikku"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

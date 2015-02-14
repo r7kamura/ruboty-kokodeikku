@@ -1,31 +1,14 @@
 # Ruboty::Kokodeikku
-
-TODO: Write a gem description
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'ruboty-kokodeikku'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install ruboty-kokodeikku
+[Ruboty](https://github.com/r7kamura/ruboty) plug-in to find haiku from our daily conversations.
 
 ## Usage
+Requires mecab. For heroku, you can use [heroku-buildpack-mecab](https://github.com/diasks2/heroku-buildpack-mecab).
 
-TODO: Write usage instructions here
+```
+heroku config:set \
+  BUILDPACK_URL=https://github.com/diasks2/heroku-buildpack-mecab.git\
+  LD_LIBRARY_PATH=/app/vendor/mecab/lib\
+  MECAB_PATH=/app/vendor/mecab/lib/libmecab.so
+```
 
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/ruboty-kokodeikku/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+![](images/example.png)
