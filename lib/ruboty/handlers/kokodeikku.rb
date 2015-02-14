@@ -1,4 +1,5 @@
 require "ikku"
+require "ruboty"
 
 module Ruboty
   module Handlers
