@@ -14,7 +14,7 @@ module Ruboty
       )
 
       def kokodeikku(message)
-        if !message.body.start_with?(PREFIX) && (phrases = reviewer.find(message.body))
+        if message.from != robot.name && !message.body.start_with?(PREFIX) && (phrases = reviewer.find(message.body))
           message.reply("#{PREFIX}#{phrases.map(&:join).join(' ')}")
         end
       end
