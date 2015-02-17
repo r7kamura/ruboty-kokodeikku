@@ -1,3 +1,6 @@
+## 0.0.4
+- Prevent to compose ikku from its own message
+
 ## 0.0.3
 - Fix bug
 
