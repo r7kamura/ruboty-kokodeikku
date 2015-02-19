@@ -1,3 +1,6 @@
+## 0.0.5
+- Use ikku 0.1.1
+
 ## 0.0.4
 - Prevent to compose ikku from its own message
 
