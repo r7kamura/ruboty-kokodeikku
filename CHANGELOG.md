@@ -1,3 +1,6 @@
+## 0.0.6
+- Add KOKODEIKKU_CHANNEL env
+
 ## 0.0.5
 - Use ikku 0.1.1
 
