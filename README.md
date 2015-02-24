@@ -12,3 +12,8 @@ heroku config:set \
 ```
 
 ![](images/example.png)
+
+## ENV
+```
+KOKODEIKKU_CHANNEL - Pass comma-separated names to specify channels (optional)
+```
