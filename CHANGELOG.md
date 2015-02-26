@@ -1,3 +1,6 @@
+## 0.0.8
+- Add KOKODEIKKU_PREFIX to change prefix message
+
 ## 0.0.7
 - Add KOKODEIKKU_RULE to change song rule
 
