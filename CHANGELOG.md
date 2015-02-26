@@ -1,3 +1,6 @@
+## 0.0.7
+- Add KOKODEIKKU_RULE to change song rule
+
 ## 0.0.6
 - Add KOKODEIKKU_CHANNEL env
 
