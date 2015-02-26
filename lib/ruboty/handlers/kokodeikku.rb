@@ -6,8 +6,9 @@ module Ruboty
     class Kokodeikku < Base
       env 'KOKODEIKKU_CHANNEL', "if specified, kokodeikku will be enabled only on the specified channels (separated by comma)", optional: true
 
-      PREFIX = "ここで一句 "
+      DEFAULT_PREFIX = "ここで一句"
 
+      env :KOKODEIKKU_PREFIX, 'Pass optional prefix message (default: ここで一句)', optional: true
       env :KOKODEIKKU_RULE, 'Pass optional song rule (default: "5,7,5")', optional: true
 
       on(
@@ -20,8 +21,8 @@ module Ruboty
       def kokodeikku(message)
         return if channels && !channels.include?(message.to)
 
-        if message.from != robot.name && !message.body.start_with?(PREFIX) && (song = reviewer.find(message.body))
-          message.reply("#{PREFIX}#{song.phrases.map(&:join).join(' ')}")
+        if message.from != robot.name && !message.body.start_with?("#{prefix} ") && (song = reviewer.find(message.body))
+          message.reply("#{prefix} #{song.phrases.map(&:join).join(' ')}")
         end
       end
 
@@ -33,6 +34,10 @@ module Ruboty
         else
           nil
         end
+      end
+
+      def prefix
+        ENV["KOKODEIKKU_PREFIX"] || DEFAULT_PREFIX
       end
 
       def reviewer
