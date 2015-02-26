@@ -16,4 +16,5 @@ heroku config:set \
 ## ENV
 ```
 KOKODEIKKU_CHANNEL - Pass comma-separated names to specify channels (optional)
+KOKODEIKKU_RULE    - Pass optional song rule (default: `"5,7,5"`)
 ```

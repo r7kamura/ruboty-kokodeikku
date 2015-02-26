@@ -8,6 +8,8 @@ module Ruboty
 
       PREFIX = "ここで一句 "
 
+      env :KOKODEIKKU_RULE, 'Pass optional song rule (default: "5,7,5")', optional: true
+
       on(
         //,
         all: true,
@@ -34,7 +36,13 @@ module Ruboty
       end
 
       def reviewer
-        @reviewer ||= Ikku::Reviewer.new
+        @reviewer ||= Ikku::Reviewer.new(rule: rule)
+      end
+
+      def rule
+        if ENV["KOKODEIKKU_RULE"]
+          ENV["KOKODEIKKU_RULE"].split(",").map(&:to_i)
+        end
       end
     end
   end
