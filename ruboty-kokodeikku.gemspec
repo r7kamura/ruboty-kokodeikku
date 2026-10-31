@@ -16,6 +16,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_runtime_dependency "csv"
   spec.add_runtime_dependency "ikku", ">= 0.1.1"
   spec.add_runtime_dependency "ruboty"
   spec.add_development_dependency "bundler", "~> 1.7"
