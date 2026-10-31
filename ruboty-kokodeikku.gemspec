@@ -9,6 +9,11 @@ Gem::Specification.new do |spec|
   spec.email         = ["r7kamura@gmail.com"]
   spec.summary       = "Ruboty plug-in to find haiku from our daily conversations."
   spec.homepage      = "https://github.com/r7kamura/ruboty-kokodeikku"
+
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = spec.homepage
+  spec.metadata["changelog_uri"] = "#{spec.homepage}/releases"
+  spec.metadata["rubygems_mfa_required"] = "true"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
